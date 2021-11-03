@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 
 public class SortedLeaves {
     ArrayList<String> myList;
@@ -28,6 +30,9 @@ public class SortedLeaves {
 
         doWork(tree);
 
-        return getList().toArray(new String[myList.size()]);
+        String[] ret = getList().toArray(new String[myList.size()]);
+        Arrays.sort(ret);
+
+        return ret;
     }
 }
