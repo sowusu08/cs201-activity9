@@ -1,6 +1,16 @@
 import java.util.ArrayList;
 
 public class SortedLeaves {
+    ArrayList<String> myList;
+
+    public SortedLeaves(){
+        myList = new ArrayList<>();
+    }
+
+    public ArrayList<String> getList(){
+        return this.myList;
+    }
+
     public void doWork(TreeNode tree){
         if(tree == null) return;
 
@@ -14,10 +24,10 @@ public class SortedLeaves {
 
     public String[] values(TreeNode tree) {
         // create myList
-        ArrayList<String> myList = new ArrayList<>();
+        //ArrayList<String> myList = new ArrayList<>();
 
         doWork(tree);
 
-        return myList.toArray(new String[myList.size()]);
+        return getList().toArray(new String[myList.size()]);
     }
 }
